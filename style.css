@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+/* Add more CSS rules as needed */
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.container {
+  border: solid 1px #ccc;
+  padding: 1em;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.submit {
+  margin-top: 1em;
+  width: 100%;
+  background-color: aliceblue;
+  border: none;
+  padding: 7px 0;
+  cursor: pointer;
+}
