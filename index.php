@@ -11,46 +11,45 @@
     <div class="container">
       <div class="inputs">
         <label for="username">Username</label>
-        <input type="text" placeholder="username">
+        <input type="text" name='username' placeholder="username">
       </div>
       <div class="inputs">
         <label for="password">Password</label>
-        <input type="password" placeholder="password">
+        <input type="password" name='password' placeholder="password">
       </div>
       <div class="inputs">
         <label for="age">Age</label>
-        <input type="number" placeholder="age">
+        <input type="number" name='age' placeholder="age">
       </div>
       <div class="inputs">
         <label for="city">City</label>
-        <input type="text" placeholder="city">
+        <input type="text" name='city' placeholder="city">
       </div>
       <button class="submit">submit</button>
 
       <div class="input-result">
 
-        <p>Username:</p>
-        <p>Password: </p>
-        <p>Age: </p>
-        <p>City: </p>
+
       </div>
     </div>
   </div>
-  <?php
-      //  <!-- grab the value from the inputs and add them after user clicks on the button -->
-      if(isset($_POST['submit'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $age = $_POST['age'];
-        $city = $_POST['city'];
-        echo "<div class='input-result'>
-        <p>Username: $username</p>
-        <p>Password: $password</p>
-        <p>Age: $age</p>
-        <p>City: $city</p>
-        </div>";
-      }
-  ?>
+   <script>
+  document.querySelector('.submit').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    let username = document.querySelector('input[name="username"]').value;
+    let password = document.querySelector('input[name="password"]').value;
+    let age = document.querySelector('input[name="age"]').value;
+    let city = document.querySelector('input[name="city"]').value;
+
+    document.querySelector('.input-result').innerHTML = `
+      <p>Username: ${username}</p>
+      <p>Password: ${password}</p>
+      <p>Age: ${age}</p>
+      <p>City: ${city}</p>
+    `;
+  });
+</script>
 
 </body>
 </html>
